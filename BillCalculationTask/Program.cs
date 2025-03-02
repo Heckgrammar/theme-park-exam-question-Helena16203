@@ -1,4 +1,4 @@
-﻿namespace ThemeParkCalculationTask
+    ﻿namespace ThemeParkCalculationTask
 {
     internal class Program
     {
@@ -20,6 +20,14 @@
             // 3: 6 people
             // Commit your changes and add screnshot evidence of your program running to the Readme
 
-        }
+            Console.WriteLine("How many people are in your group?");
+            int NumPeople = Convert.ToInt32(Console.ReadLine());
+            int Charge = NumPeople * 15;
+            if (NumPeople >= 6)
+            {
+                Charge = Charge - 5;
+            }
+            Console.WriteLine("You have been charged £" + Charge);
+       }
     }
 }
